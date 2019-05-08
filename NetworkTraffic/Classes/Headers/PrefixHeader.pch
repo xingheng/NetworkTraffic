@@ -1,0 +1,60 @@
+//
+//  PrefixHeader.pch
+//  NetworkTraffic
+//
+//  Created by WeiHan on 2019/5/8.
+//  Copyright © 2019 WillHan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <Foundation/Foundation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <HUDHelper/HUDHelper.h>
+#import <libextobjc/extobjc.h>
+
+#define MAS_SHORTHAND
+#import <Masonry/Masonry.h>
+
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+FOUNDATION_EXPORT DDLogLevel ddLogLevel;
+
+#import <HUDHelper/HUDHelper.h>
+
+// For DSBaseViewController
+#define DS_SHORTHAND
+#import <DSBaseViewController/DSBaseViewController.h>
+
+// DSUtility
+#import <DSUtility/DSUtility.h>
+#import <DSUtility/NSObject+va_list.h>
+#import <DSUtility/UIColor+HexString.h>
+#import <DSUtility/UIImage+ColorHelper.h>
+#import <DSUtility/UIImage+LoadImage.h>
+#import <DSUtility/SystemHelper.h>
+
+// ------------------- Macros -------------------
+
+// For view constraints debugging with Masonry
+#if DEBUG
+    #ifndef MASKeyEx
+        #define MASKeyEx(__view__, __name__) __view__.mas_key = @"" # __name__
+        #define MASKey(__view__)             MASKeyEx(__view__, __view__)
+    #endif
+#else
+    #define MASKeyEx(__view__, __name__)
+    #define MASKey(__view__)
+#endif
+
+#if DEBUG
+#define FLEX                1
+#endif
+
+#define RandomColor     RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define kTintColor       RGB(198, 198, 198)
+#define kThemeColor       RGB(58, 58, 58)
+#define kTextColor       RGB(58, 58, 58)
+
+#endif /* PrefixHeader_pch */

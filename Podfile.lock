@@ -1,0 +1,122 @@
+PODS:
+  - AppCenter/Analytics (1.14.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.14.0)
+  - AppCenter/Crashes (1.14.0):
+    - AppCenter/Core
+  - CocoaLumberjack (3.5.2):
+    - CocoaLumberjack/Core (= 3.5.2)
+  - CocoaLumberjack/Core (3.5.2)
+  - DSBaseViewController (1.4.1)
+  - DSUtility (0.5.3):
+    - DSUtility/All (= 0.5.3)
+  - DSUtility/All (0.5.3):
+    - DSUtility/Core
+    - DSUtility/CustomView
+    - DSUtility/Date
+    - DSUtility/Encryption
+    - DSUtility/Image
+    - DSUtility/Logger
+    - DSUtility/Path
+    - DSUtility/String
+    - DSUtility/System
+    - DSUtility/TableView
+    - DSUtility/View
+    - DSUtility/ViewController
+  - DSUtility/Core (0.5.3)
+  - DSUtility/CustomView (0.5.3):
+    - DSUtility/Core
+  - DSUtility/Date (0.5.3)
+  - DSUtility/Encryption (0.5.3)
+  - DSUtility/Image (0.5.3)
+  - DSUtility/Logger (0.5.3):
+    - CocoaLumberjack (~> 3.2)
+  - DSUtility/Path (0.5.3)
+  - DSUtility/String (0.5.3)
+  - DSUtility/System (0.5.3)
+  - DSUtility/TableView (0.5.3)
+  - DSUtility/View (0.5.3)
+  - DSUtility/ViewController (0.5.3)
+  - FLEX (2.4.0)
+  - HUDHelper (0.3.9):
+    - MBProgressHUD (~> 1.0)
+  - libextobjc (0.6):
+    - libextobjc/EXTADT (= 0.6)
+    - libextobjc/EXTConcreteProtocol (= 0.6)
+    - libextobjc/EXTKeyPathCoding (= 0.6)
+    - libextobjc/EXTNil (= 0.6)
+    - libextobjc/EXTSafeCategory (= 0.6)
+    - libextobjc/EXTScope (= 0.6)
+    - libextobjc/EXTSelectorChecking (= 0.6)
+    - libextobjc/EXTSynthesize (= 0.6)
+    - "libextobjc/NSInvocation+EXT (= 0.6)"
+    - "libextobjc/NSMethodSignature+EXT (= 0.6)"
+    - libextobjc/RuntimeExtensions (= 0.6)
+    - libextobjc/UmbrellaHeader (= 0.6)
+  - libextobjc/EXTADT (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.6):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.6):
+    - libextobjc/RuntimeExtensions
+  - "libextobjc/NSInvocation+EXT (0.6)":
+    - libextobjc/RuntimeExtensions
+  - "libextobjc/NSMethodSignature+EXT (0.6)":
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.6)
+  - libextobjc/UmbrellaHeader (0.6)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - UserDefaultsHelper (0.1.2)
+
+DEPENDENCIES:
+  - AppCenter/Analytics (~> 1.14)
+  - AppCenter/Crashes (~> 1.14)
+  - CocoaLumberjack (~> 3.4)
+  - DSBaseViewController (~> 1.4.1)
+  - DSUtility (= 0.5.3)
+  - FLEX (~> 2.4)
+  - HUDHelper (= 0.3.9)
+  - libextobjc (~> 0.6)
+  - Masonry (~> 1.1.0)
+  - UserDefaultsHelper (= 0.1.2)
+
+SPEC REPOS:
+  https://bitbucket.org/UItachi/specs.git:
+    - DSUtility
+  https://github.com/cocoapods/specs.git:
+    - AppCenter
+    - CocoaLumberjack
+    - DSBaseViewController
+    - FLEX
+    - HUDHelper
+    - libextobjc
+    - Masonry
+    - MBProgressHUD
+    - UserDefaultsHelper
+
+SPEC CHECKSUMS:
+  AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
+  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
+  DSBaseViewController: 6b3d493599f9ce9187d06c617108b311cbdd1d71
+  DSUtility: 39763fea3150ccc94c3a19338357e5826bffd3f9
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  HUDHelper: 2a76aa86a34bd9ca24080a1a10a4d5457cb6050c
+  libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  UserDefaultsHelper: 96ec1f1c68d37db01da62f8216eda62dbc7feacc
+
+PODFILE CHECKSUM: 9764927cd15b7b62eb8c660a4431e108402af92e
+
+COCOAPODS: 1.6.1

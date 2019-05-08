@@ -11,9 +11,12 @@
 		689A81D62282BC75008C9BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689A81D52282BC75008C9BEE /* Assets.xcassets */; };
 		689A81D92282BC75008C9BEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689A81D72282BC75008C9BEE /* LaunchScreen.storyboard */; };
 		689A81DC2282BC75008C9BEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A81DB2282BC75008C9BEE /* main.m */; };
+		689A81EA2282C152008C9BEE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A81E92282C152008C9BEE /* HomeViewController.m */; };
+		E7ED857C59C1DC2F89F6DE51 /* libPods-NetworkTraffic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6147505C1E659E206228618F /* libPods-NetworkTraffic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6147505C1E659E206228618F /* libPods-NetworkTraffic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkTraffic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		689A81CF2282BC73008C9BEE /* NetworkTraffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkTraffic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		689A81D22282BC73008C9BEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		689A81D32282BC73008C9BEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -21,6 +24,11 @@
 		689A81D82282BC75008C9BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		689A81DA2282BC75008C9BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		689A81DB2282BC75008C9BEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		689A81E72282C047008C9BEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		689A81E82282C152008C9BEE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		689A81E92282C152008C9BEE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		9450D2F2F4A6D669924F9604 /* Pods-NetworkTraffic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTraffic.release.xcconfig"; path = "Target Support Files/Pods-NetworkTraffic/Pods-NetworkTraffic.release.xcconfig"; sourceTree = "<group>"; };
+		E8E89A1E507412B8D5EAEBDE /* Pods-NetworkTraffic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTraffic.debug.xcconfig"; path = "Target Support Files/Pods-NetworkTraffic/Pods-NetworkTraffic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ED857C59C1DC2F89F6DE51 /* libPods-NetworkTraffic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1880A029733D9BA64F4A2AEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6147505C1E659E206228618F /* libPods-NetworkTraffic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		689A81C62282BC73008C9BEE = {
 			isa = PBXGroup;
 			children = (
 				689A81D12282BC73008C9BEE /* NetworkTraffic */,
 				689A81D02282BC73008C9BEE /* Products */,
+				6D0D43C4F7F65D5ADCD01B38 /* Pods */,
+				1880A029733D9BA64F4A2AEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,12 +74,64 @@
 			children = (
 				689A81D22282BC73008C9BEE /* AppDelegate.h */,
 				689A81D32282BC73008C9BEE /* AppDelegate.m */,
+				689A81E22282BFD0008C9BEE /* Classes */,
 				689A81D52282BC75008C9BEE /* Assets.xcassets */,
 				689A81D72282BC75008C9BEE /* LaunchScreen.storyboard */,
 				689A81DA2282BC75008C9BEE /* Info.plist */,
 				689A81DB2282BC75008C9BEE /* main.m */,
 			);
 			path = NetworkTraffic;
+			sourceTree = "<group>";
+		};
+		689A81E22282BFD0008C9BEE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				689A81E42282BFD0008C9BEE /* Controllers */,
+				689A81E52282BFD0008C9BEE /* Views */,
+				689A81E32282BFD0008C9BEE /* Models */,
+				689A81E62282C028008C9BEE /* Headers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		689A81E32282BFD0008C9BEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		689A81E42282BFD0008C9BEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				689A81E82282C152008C9BEE /* HomeViewController.h */,
+				689A81E92282C152008C9BEE /* HomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		689A81E52282BFD0008C9BEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		689A81E62282C028008C9BEE /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				689A81E72282C047008C9BEE /* PrefixHeader.pch */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		6D0D43C4F7F65D5ADCD01B38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8E89A1E507412B8D5EAEBDE /* Pods-NetworkTraffic.debug.xcconfig */,
+				9450D2F2F4A6D669924F9604 /* Pods-NetworkTraffic.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +141,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 689A81DF2282BC75008C9BEE /* Build configuration list for PBXNativeTarget "NetworkTraffic" */;
 			buildPhases = (
+				6F5235E3E820584D39CF4352 /* [CP] Check Pods Manifest.lock */,
 				689A81CB2282BC73008C9BEE /* Sources */,
 				689A81CC2282BC73008C9BEE /* Frameworks */,
 				689A81CD2282BC73008C9BEE /* Resources */,
@@ -127,12 +199,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F5235E3E820584D39CF4352 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkTraffic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		689A81CB2282BC73008C9BEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				689A81DC2282BC75008C9BEE /* main.m in Sources */,
+				689A81EA2282C152008C9BEE /* HomeViewController.m in Sources */,
 				689A81D42282BC73008C9BEE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,34 +363,45 @@
 		};
 		689A81E02282BC75008C9BEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E89A1E507412B8D5EAEBDE /* Pods-NetworkTraffic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X584CVJ28C;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/Classes/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = NetworkTraffic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.NetworkTraffic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.networktraffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "HKR-Wildcard-Development-Profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		689A81E12282BC75008C9BEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9450D2F2F4A6D669924F9604 /* Pods-NetworkTraffic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X584CVJ28C;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${SRCROOT}/${PROJECT_NAME}/Classes/Headers/PrefixHeader.pch";
 				INFOPLIST_FILE = NetworkTraffic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.NetworkTraffic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.networktraffic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "HKR-Wildcard-Distribution-Profile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
