@@ -6,8 +6,6 @@
 //  Copyright © 2019 WillHan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface TodayViewController : UIViewController
+@interface TodayViewController : BASEVIEWCONTROLLER
 
 @end

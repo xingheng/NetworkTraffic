@@ -6,24 +6,15 @@
 //  Copyright © 2019 WillHan. All rights reserved.
 //
 
-#import <AppCenter/AppCenter.h>
-#import <AppCenterAnalytics/AppCenterAnalytics.h>
-#import <AppCenterCrashes/AppCenterCrashes.h>
 #import <DSBaseViewController/BaseTabBarController.h>
 #import <DSBaseViewController/BaseNavigationController.h>
+#import <NetworkTrafficCommon/NetworkTrafficCommon.h>
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-
 
 void *const RequestFailureKey = "RequestFailureKey";
 
 void CustomConfigurationForHUDHelper(HUDHelper *hud);
-
-#if DEBUG
-DDLogLevel ddLogLevel = DDLogLevelVerbose;
-#else
-DDLogLevel ddLogLevel = DDLogLevelError;
-#endif
 
 @interface AppDelegate ()
 
@@ -33,8 +24,7 @@ DDLogLevel ddLogLevel = DDLogLevelError;
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions
 {
-    [self setupLogger];
-    [self setupCrashReporter];
+    [NetworkTrafficCommon initialization];
 
     return YES;
 }
@@ -80,17 +70,6 @@ DDLogLevel ddLogLevel = DDLogLevelError;
 }
 
 #pragma mark - Private
-
-- (void)setupLogger
-{
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [DDLog addLogger:[DDOSLogger sharedInstance]];
-}
-
-- (void)setupCrashReporter
-{
-    [MSAppCenter start:@"14268fb6-f02e-499a-8e0c-de88690be409" withServices:@[MSAnalytics.class, MSCrashes.class]];
-}
 
 - (void)setupAppearance
 {

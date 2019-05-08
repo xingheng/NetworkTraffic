@@ -10,19 +10,26 @@ inhibit_all_warnings!
 # Issue: https://github.com/CocoaPods/CocoaPods/issues/4032
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-target 'NetworkTraffic' do
+target 'NetworkTrafficCommon' do
     pod 'CocoaLumberjack', '~> 3.4'
     pod 'libextobjc', '~> 0.6'
     pod 'Masonry', '~> 1.1.0'
-    pod 'FLEX', '~> 2.4', :configurations => ['Debug']
     pod 'AppCenter/Analytics', '~> 1.14'
     pod 'AppCenter/Crashes', '~> 1.14'
 
     # maintained by myself
     pod 'DSBaseViewController', '~> 1.4.1'
-    pod 'HUDHelper', '0.3.9'
     pod 'UserDefaultsHelper', '0.1.2'
-    pod 'DSUtility', '0.5.3'
+
+    target 'NetworkTraffic' do
+        pod 'FLEX', '~> 2.4', :configurations => ['Debug']
+        pod 'HUDHelper', '0.3.9'
+        pod 'DSUtility', '0.5.3'
+    end
+
+    target 'NetworkTrafficUsage' do
+        # pass
+    end
 
     post_install do |installer|
         # https://github.com/CocoaPods/CocoaPods/issues/7314

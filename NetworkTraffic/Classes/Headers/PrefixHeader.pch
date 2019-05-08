@@ -19,7 +19,11 @@
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-FOUNDATION_EXPORT DDLogLevel ddLogLevel;
+#if DEBUG
+static DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static DDLogLevel ddLogLevel = DDLogLevelError;
+#endif
 
 #import <HUDHelper/HUDHelper.h>
 
