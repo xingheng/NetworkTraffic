@@ -12,8 +12,35 @@
 		689A81D92282BC75008C9BEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 689A81D72282BC75008C9BEE /* LaunchScreen.storyboard */; };
 		689A81DC2282BC75008C9BEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A81DB2282BC75008C9BEE /* main.m */; };
 		689A81EA2282C152008C9BEE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A81E92282C152008C9BEE /* HomeViewController.m */; };
+		689A82072282CD87008C9BEE /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689A82062282CD87008C9BEE /* NotificationCenter.framework */; };
+		689A820B2282CD87008C9BEE /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689A820A2282CD87008C9BEE /* TodayViewController.m */; };
+		689A82122282CD87008C9BEE /* NetworkTrafficUsage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 689A82052282CD87008C9BEE /* NetworkTrafficUsage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7ED857C59C1DC2F89F6DE51 /* libPods-NetworkTraffic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6147505C1E659E206228618F /* libPods-NetworkTraffic.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		689A82102282CD87008C9BEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 689A81C72282BC73008C9BEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689A82042282CD87008C9BEE;
+			remoteInfo = NetworkTrafficUsage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		689A82162282CD87008C9BEE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				689A82122282CD87008C9BEE /* NetworkTrafficUsage.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6147505C1E659E206228618F /* libPods-NetworkTraffic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkTraffic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +54,11 @@
 		689A81E72282C047008C9BEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		689A81E82282C152008C9BEE /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		689A81E92282C152008C9BEE /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		689A82052282CD87008C9BEE /* NetworkTrafficUsage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NetworkTrafficUsage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		689A82062282CD87008C9BEE /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		689A82092282CD87008C9BEE /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		689A820A2282CD87008C9BEE /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		689A820F2282CD87008C9BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9450D2F2F4A6D669924F9604 /* Pods-NetworkTraffic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTraffic.release.xcconfig"; path = "Target Support Files/Pods-NetworkTraffic/Pods-NetworkTraffic.release.xcconfig"; sourceTree = "<group>"; };
 		E8E89A1E507412B8D5EAEBDE /* Pods-NetworkTraffic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTraffic.debug.xcconfig"; path = "Target Support Files/Pods-NetworkTraffic/Pods-NetworkTraffic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		689A82022282CD87008C9BEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689A82072282CD87008C9BEE /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -47,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				6147505C1E659E206228618F /* libPods-NetworkTraffic.a */,
+				689A82062282CD87008C9BEE /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -55,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				689A81D12282BC73008C9BEE /* NetworkTraffic */,
+				689A82082282CD87008C9BEE /* NetworkTrafficUsage */,
 				689A81D02282BC73008C9BEE /* Products */,
 				6D0D43C4F7F65D5ADCD01B38 /* Pods */,
 				1880A029733D9BA64F4A2AEA /* Frameworks */,
@@ -65,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				689A81CF2282BC73008C9BEE /* NetworkTraffic.app */,
+				689A82052282CD87008C9BEE /* NetworkTrafficUsage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +168,16 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		689A82082282CD87008C9BEE /* NetworkTrafficUsage */ = {
+			isa = PBXGroup;
+			children = (
+				689A82092282CD87008C9BEE /* TodayViewController.h */,
+				689A820A2282CD87008C9BEE /* TodayViewController.m */,
+				689A820F2282CD87008C9BEE /* Info.plist */,
+			);
+			path = NetworkTrafficUsage;
+			sourceTree = "<group>";
+		};
 		6D0D43C4F7F65D5ADCD01B38 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,15 +198,34 @@
 				689A81CB2282BC73008C9BEE /* Sources */,
 				689A81CC2282BC73008C9BEE /* Frameworks */,
 				689A81CD2282BC73008C9BEE /* Resources */,
+				689A82162282CD87008C9BEE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				689A82112282CD87008C9BEE /* PBXTargetDependency */,
 			);
 			name = NetworkTraffic;
 			productName = NetworkTraffic;
 			productReference = 689A81CF2282BC73008C9BEE /* NetworkTraffic.app */;
 			productType = "com.apple.product-type.application";
+		};
+		689A82042282CD87008C9BEE /* NetworkTrafficUsage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689A82152282CD87008C9BEE /* Build configuration list for PBXNativeTarget "NetworkTrafficUsage" */;
+			buildPhases = (
+				689A82012282CD87008C9BEE /* Sources */,
+				689A82022282CD87008C9BEE /* Frameworks */,
+				689A82032282CD87008C9BEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetworkTrafficUsage;
+			productName = NetworkTrafficUsage;
+			productReference = 689A82052282CD87008C9BEE /* NetworkTrafficUsage.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,6 +237,9 @@
 				ORGANIZATIONNAME = WillHan;
 				TargetAttributes = {
 					689A81CE2282BC73008C9BEE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					689A82042282CD87008C9BEE = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -183,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				689A81CE2282BC73008C9BEE /* NetworkTraffic */,
+				689A82042282CD87008C9BEE /* NetworkTrafficUsage */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +270,13 @@
 			files = (
 				689A81D62282BC75008C9BEE /* Assets.xcassets in Resources */,
 				689A81D92282BC75008C9BEE /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689A82032282CD87008C9BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +318,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		689A82012282CD87008C9BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689A820B2282CD87008C9BEE /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		689A82112282CD87008C9BEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 689A82042282CD87008C9BEE /* NetworkTrafficUsage */;
+			targetProxy = 689A82102282CD87008C9BEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		689A81D72282BC75008C9BEE /* LaunchScreen.storyboard */ = {
@@ -406,6 +505,47 @@
 			};
 			name = Release;
 		};
+		689A82132282CD87008C9BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X584CVJ28C;
+				INFOPLIST_FILE = NetworkTrafficUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.networktraffic.networktrafficusage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "HKR-Wildcard-Development-Profile";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689A82142282CD87008C9BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = X584CVJ28C;
+				INFOPLIST_FILE = NetworkTrafficUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.willhan.networktraffic.networktrafficusage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "HKR-Wildcard-Distribution-Profile";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +563,15 @@
 			buildConfigurations = (
 				689A81E02282BC75008C9BEE /* Debug */,
 				689A81E12282BC75008C9BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689A82152282CD87008C9BEE /* Build configuration list for PBXNativeTarget "NetworkTrafficUsage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689A82132282CD87008C9BEE /* Debug */,
+				689A82142282CD87008C9BEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
