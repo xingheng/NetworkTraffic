@@ -6,6 +6,6 @@
 //  Copyright © 2019 WillHan. All rights reserved.
 //
 
-@interface TodayViewController : BASEVIEWCONTROLLER
+@interface TodayViewController : UIViewController
 
 @end
