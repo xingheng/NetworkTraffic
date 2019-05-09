@@ -48,11 +48,11 @@
 #endif
 
     lblUpload.font = [UIFont boldSystemFontOfSize:20];
-    lblUpload.textColor = [UIColor whiteColor];
+    lblUpload.textColor = RGB(38, 38, 38);
     lblUpload.textAlignment = NSTextAlignmentCenter;
 
     lblDownload.font = [UIFont boldSystemFontOfSize:20];
-    lblDownload.textColor = [UIColor whiteColor];
+    lblDownload.textColor = RGB(38, 38, 38);
     lblDownload.textAlignment = NSTextAlignmentCenter;
 
     [containerView addSubview:lblUpload];
@@ -85,12 +85,12 @@
 
 - (void)_updateNetworkDataCounter
 {
-    NSDictionary *dict = GetNetworkDataCounters();
-    NSUInteger uploadBytes = [dict[NetworkDataCounterKeyWiFiSent] unsignedIntegerValue] + [dict[NetworkDataCounterKeyWWANSent] unsignedIntegerValue];
-    NSUInteger downloadBytes = [dict[NetworkDataCounterKeyWiFiReceived] unsignedIntegerValue] + [dict[NetworkDataCounterKeyWWANReceived] unsignedIntegerValue];
+    DataBytes dBytes = GetNetworkDataCounters();
+    NSUInteger uploadBytes = dBytes.WiFiSent + dBytes.WWANSent;
+    NSUInteger downloadBytes = dBytes.WiFiReceived + dBytes.WWANReceived;
 
-    self.lblUpload.text = [@"↑ " stringByAppendingString:FormatTrafficData(uploadBytes)];
-    self.lblDownload.text = [@"↓ " stringByAppendingString:FormatTrafficData(downloadBytes)];
+    self.lblUpload.text = [@"↑ " stringByAppendingString:FormatTrafficDataBits(uploadBytes)];
+    self.lblDownload.text = [@"↓ " stringByAppendingString:FormatTrafficDataBits(downloadBytes)];
 }
 
 #pragma mark - NCWidgetProviding

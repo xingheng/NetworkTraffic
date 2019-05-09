@@ -8,14 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-FOUNDATION_EXPORT NSString *const NetworkDataCounterKeyWWANSent;
-FOUNDATION_EXPORT NSString *const NetworkDataCounterKeyWWANReceived;
-FOUNDATION_EXPORT NSString *const NetworkDataCounterKeyWiFiSent;
-FOUNDATION_EXPORT NSString *const NetworkDataCounterKeyWiFiReceived;
+typedef long long DataByte;
 
-NSDictionary * GetNetworkDataCounters(void);
+typedef struct {
+    DataByte WWANSent;
+    DataByte WWANReceived;
+    DataByte WiFiSent;
+    DataByte WiFiReceived;
+} DataBytes;
 
-NSString * FormatTrafficData(NSUInteger bytes);
+BOOL DataBytesEmpty(DataBytes bytes);
+
+DataBytes GetNetworkDataCounters(void);
+
+NSString * FormatTrafficDataBytes(DataByte bytes);
+
+NSString * FormatTrafficDataBits(DataByte bits);
 
 
 @interface NetworkTrafficCommon : NSObject
