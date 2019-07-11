@@ -47,13 +47,25 @@ BOOL DataBytesEmpty(DataBytes bytes)
            bytes.WiFiSent == 0 && bytes.WiFiReceived == 0;
 }
 
+void DataBytesPadding(DataBytes *pBytes, CGFloat multiplier)
+{
+    if (!pBytes) {
+        return;
+    }
+
+    pBytes->WWANSent *= multiplier;
+    pBytes->WWANReceived *= multiplier;
+    pBytes->WiFiSent *= multiplier;
+    pBytes->WiFiReceived *= multiplier;
+}
+
 // ---------------------------------- BEGIN ----------------------------------
 //  Refer to `iPhone Data Usage Tracking/Monitoring`
 //  URL:https://stackoverflow.com/a/8014012/1677041
 #include <net/if.h>
 #include <ifaddrs.h>
 
-DataBytes GetNetworkDataCounters(void)
+DataBytes GetNetworkDataCounters(DataBytes *dBytes)
 {
     struct ifaddrs *addrs;
     const struct ifaddrs *cursor;
@@ -106,16 +118,20 @@ DataBytes GetNetworkDataCounters(void)
         return emptyDataBytes;
     }
 
-    DataBytes dBytes = {
-        WWANSent - lastDataBytes.WWANSent,
-        WWANReceived - lastDataBytes.WWANReceived,
-        WiFiSent - lastDataBytes.WiFiSent,
-        WiFiReceived - lastDataBytes.WiFiReceived
-    };
+    if (dBytes) {
+        DataBytes bytes = {
+            WWANSent - lastDataBytes.WWANSent,
+            WWANReceived - lastDataBytes.WWANReceived,
+            WiFiSent - lastDataBytes.WiFiSent,
+            WiFiReceived - lastDataBytes.WiFiReceived
+        };
+
+        *dBytes = bytes;
+    }
 
     lastDataBytes = dataBytes;
 
-    return dBytes;
+    return dataBytes;
 }
 
 // ----------------------------------- END -----------------------------------

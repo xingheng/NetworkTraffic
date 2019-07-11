@@ -10,6 +10,8 @@
 #import <NetworkTrafficCommon/NetworkTrafficCommon.h>
 #import "TodayViewController.h"
 
+#define kTimerInterval  0.5
+
 @interface TodayViewController () <NCWidgetProviding>
 
 @property (nonatomic, strong) UIView *containerView;
@@ -40,7 +42,7 @@
     self.containerView = containerView;
     self.lblUpload = lblUpload;
     self.lblDownload = lblDownload;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(_updateNetworkDataCounter) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:kTimerInterval target:self selector:@selector(_updateNetworkDataCounter) userInfo:nil repeats:YES];
 
 #if DEBUG && 0
     self.view.backgroundColor = RandomColor;
@@ -85,7 +87,12 @@
 
 - (void)_updateNetworkDataCounter
 {
-    DataBytes dBytes = GetNetworkDataCounters();
+    DataBytes dBytes;
+    GetNetworkDataCounters(&dBytes);
+    DataBytesPadding(&dBytes, 1.0 / kTimerInterval);
+
+    DDLogDebug(@"dBytes: WiFiSent:%ld, WWANSent:%ld, WiFiReceived:%ld, WWANReceived:%ld", dBytes.WiFiSent, dBytes.WWANSent, dBytes.WiFiReceived, dBytes.WWANReceived);
+
     NSUInteger uploadBytes = dBytes.WiFiSent + dBytes.WWANSent;
     NSUInteger downloadBytes = dBytes.WiFiReceived + dBytes.WWANReceived;
 

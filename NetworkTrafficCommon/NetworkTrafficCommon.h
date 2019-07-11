@@ -19,7 +19,9 @@ typedef struct {
 
 BOOL DataBytesEmpty(DataBytes bytes);
 
-DataBytes GetNetworkDataCounters(void);
+void DataBytesPadding(DataBytes *pBytes, CGFloat multiplier);
+
+DataBytes GetNetworkDataCounters(DataBytes *dBytes);
 
 NSString * FormatTrafficDataBytes(DataByte bytes);
 
